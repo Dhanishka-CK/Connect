@@ -1,8 +1,6 @@
 Connect is a web-based application designed to support special education students, especially those with autism, by providing tools that help parents, teachers, and therapists engage, track, and support children more effectively.
 
-🌟 Features
-
-Engage Mode: Detects a child’s mood and recommends suitable games or activities.
+Key Features:
 
 Goal Tracking: Allows teachers and parents to set, monitor, and update learning or behavioral goals.
 
