@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect App - Sign Up</title>
+  <!-- Google Fonts: Baloo 2 for main text -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <style>
+    /* Body styling */
+    body {
+      font-family: 'Baloo 2', cursive;
+      background: linear-gradient(to bottom right, #e0f7fa, #cbf1f5); /* Consistent background */
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      height: 100vh; /* Full viewport height */
+      margin: 0;
+    }
+
+    /* Signup container styling */
+    .signup-container {
+      background: white;
+      padding: 40px;
+      border-radius: 25px; /* Rounded corners */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      width: 350px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2196f3; /* Blue heading */
+      margin-bottom: 20px;
+    }
+
+    /* Input field styling */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #b2ebf2; /* Light blue border */
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    /* Button styling */
+    button {
+      background-color: #2196f3; /* Blue button */
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s; /* Smooth hover effect */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Button shadow */
+    }
+
+    button:hover {
+      background-color: #1976d2; /* Darker blue on hover */
+    }
+
+    /* Switch link styling (for signup/login toggle) */
+    .switch-link {
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .switch-link a {
+      color: #2196f3; /* Blue link text */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signup-container">
+    <h2>Join Connect</h2>
+    <form id="signupForm" action="#" method="post">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="switch-link">
+      Already have an account? <a href="login.html">Login</a>
+    </div>
+  </div>
+
+  <script>
+    // Get the signup form element
+    const signupForm = document.getElementById('signupForm');
+
+    // Add an event listener for form submission
+    signupForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+
+      // In a real application, you would send the signup data to a server here.
+      // For this example, we'll simulate successful signup by redirecting
+      // to the dashboard page after a short delay.
+      console.log('Attempting signup...'); // Log for debugging
+      setTimeout(() => {
+        window.location.href = 'dashboard.html'; // Redirect to the dashboard
+      }, 500); // 0.5 seconds delay
+    });
+  </script>
+
+</body>
+</html>

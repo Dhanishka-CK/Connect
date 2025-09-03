@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Engage Your Child</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-purple-100 to-blue-50 min-h-screen">
+
+  <div class="max-w-5xl mx-auto py-10 px-6">
+    <h1 class="text-3xl font-bold text-center text-purple-700 mb-4">Engage Your Child</h1>
+    <p class="text-center text-gray-600 mb-8">We engage your child based on their mood.</p>
+
+    <!-- Webcam Video Stream -->
+    <div class="flex justify-center mb-6">
+      <video id="video" width="320" height="240" autoplay class="rounded shadow-md"></video>
+    </div>
+
+    <!-- Capture and Submit -->
+    <div class="flex justify-center mb-6">
+      <button onclick="captureAndSend()" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition duration-200 shadow-lg">
+        Detect Mood
+      </button>
+    </div>
+
+    <!-- Back to Dashboard -->
+    <div class="text-center mt-10">
+      <a href="dashboard.html" class="text-purple-600 hover:underline text-sm">← Back to Dashboard</a>
+    </div>
+
+    <!-- Canvas for capturing the image (hidden) -->
+    <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+
+    <form id="captureForm" method="POST" action="/detect_mood">
+      <input type="hidden" name="image_data" id="image_data">
+    </form>
+  </div>
+
+  <script>
+    // Access webcam
+    const video = document.getElementById('video');
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        video.srcObject = stream;
+      });
+
+    function captureAndSend() {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const imageData = canvas.toDataURL('image/png');
+      document.getElementById('image_data').value = imageData;
+      document.getElementById('captureForm').submit();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect App - Dashboard</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f2f5;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold rounded-md px-2 py-1">Connect Dashboard</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="goals.html" class="hover:text-blue-200 transition-colors duration-200 rounded-md p-2">Goals</a></li>
+          <li><a href="explore-resources.html" class="hover:text-blue-200 transition-colors duration-200 rounded-md p-2">Parental Portal</a></li>
+          <li><a href="student-progress.html" class="hover:text-blue-200 transition-colors duration-200 rounded-md p-2">Reports</a></li>
+          <li><a href="activity.html" class="hover:text-blue-200 transition-colors duration-200 rounded-md p-2">Activity</a></li>
+          <li><a href="index.html" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors duration-200 shadow-sm">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto p-6 flex-grow">
+    <section class="bg-white p-6 rounded-lg shadow-md mb-6 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-2">Welcome Back, User!</h2>
+      <p class="text-gray-600">Here's a quick overview of your activities and progress.</p>
+    </section>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Goals -->
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+        <h3 class="text-xl font-semibold text-blue-600 mb-4 flex items-center">
+          <svg class="w-6 h-6 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+          Your Goals
+        </h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li>Sustained attention</li>
+          <li>Expressive communication</li>
+          <li>Social engagement</li>
+          <li>Emotional regulation</li>
+          <li>Functional independence</li>
+        </ul>
+        <a href="goals.html" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-200 shadow-sm inline-block">
+          Add/Manage Goals
+        </a>
+      </div>
+
+      <!-- Progress -->
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+        <h3 class="text-xl font-semibold text-green-600 mb-4 flex items-center">
+          <svg class="w-6 h-6 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0h7.5c.55 0 1-.45 1-1V7.5c0-.55-.45-1-1-1h-7.5c-.55 0-1 .45-1 1V19z"></path></svg>
+          Overall Progress
+        </h3>
+        <p class="text-gray-700 text-sm font-medium mb-1">% Goals Achieved:</p>
+        <div class="w-full bg-gray-200 rounded-full h-3 relative mb-4">
+          <div class="bg-green-500 h-3 rounded-full" style="width: 75%;"></div>
+          <span class="absolute right-2 top-0 text-xs font-bold text-gray-700 leading-none">75%</span>
+        </div>
+
+        <p class="text-gray-700 text-sm font-medium mb-1">Therapy Hours Completed:</p>
+        <div class="flex items-center mb-4 space-x-2">
+          <span class="text-2xl font-bold text-purple-600">45</span>
+          <span class="text-lg text-gray-600">hrs</span>
+        </div>
+
+        <p class="text-gray-700 text-sm font-medium mb-1">Milestones Unlocked:</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">🌟 Communication</span>
+          <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">🏆 Social Skills</span>
+          <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">✨ Fine Motor</span>
+        </div>
+        <a href="student-progress.html" class="mt-4 inline-block">
+    <button class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors duration-200 shadow-sm">
+      View Detailed Progress
+    </button>
+  </a>
+      </div>
+
+      <!-- Upload Reports -->
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+        <h3 class="text-xl font-semibold text-purple-600 mb-4 flex items-center">
+          <svg class="w-6 h-6 mr-2 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+          Upload Reports
+        </h3>
+        <p class="text-gray-700 mb-4">Submit your latest reports here.</p>
+        <input type="file" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100" />
+        <button class="mt-4 bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600 transition-colors duration-200 shadow-sm">Upload File</button>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-4 flex items-center">
+          <svg class="w-6 h-6 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+          Recent Activity
+        </h3>
+        <ul class="text-gray-700 space-y-2">
+          <li class="flex justify-between"><span>Speech Therapy</span><span class="text-sm text-gray-500">Just now</span></li>
+          <li class="flex justify-between"><span>Physiotherapy</span><span class="text-sm text-gray-500">30 mins ago</span></li>
+          <li class="flex justify-between"><span>AVAZ Session</span><span class="text-sm text-gray-500">1 hour ago</span></li>
+          <li class="flex justify-between"><span>Math & Puzzles</span><span class="text-sm text-gray-500">3 hours ago</span></li>
+        </ul>
+        <a href="activity.html" >
+          <button class="mt-4 bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-colors duration-200 shadow-sm">View All Activity</button>
+      </a>
+      </div>
+
+      <!-- ... [everything stays the same above] -->
+
+<!-- Parental Portal -->
+<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+  <h3 class="text-xl font-semibold text-pink-600 mb-4 flex items-center">
+    <svg class="w-6 h-6 mr-2 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    Parental Portal
+  </h3>
+  <ul class="text-gray-700 list-disc list-inside space-y-2">
+    <li>
+      <strong>Suggested Home Activities:</strong>
+      <p class="text-sm text-gray-600 ml-4">Daily exercises for communication, motor, and social skills.</p>
+    </li>
+    <li>
+      <strong>Tips for Parents:</strong>
+      <p class="text-sm text-gray-600 ml-4">Guidance and support to help your child thrive.</p>
+    </li>
+    <li>
+      <strong>Educational Materials:</strong>
+      <p class="text-sm text-gray-600 ml-4">Printable worksheets and visual tools.</p>
+    </li>
+  </ul>
+
+  <!-- Buttons -->
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="explore-resources.html">
+      <button class="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600 transition-colors duration-200 shadow-sm">
+        Explore Resources
+      </button>
+    </a>
+    
+    
+  </div>
+</div>
+
+<!-- ... [everything stays the same below] -->
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 text-center mt-6">
+    <div class="container mx-auto">
+      &copy; 2024 Connect App. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
